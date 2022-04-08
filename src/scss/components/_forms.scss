@@ -1,0 +1,51 @@
+.search {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+
+  &__label {
+    position: absolute;
+    right: 60px;
+    margin-right: 15px;
+  }
+
+  &__input {
+    display: block;
+    border: 1px solid $color-gray;
+    border-radius: 10px;
+    padding: 3px 5px;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, width 0.7s;
+
+    &:focus {
+      width: 250px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/search.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:focus + .search__label > .search__input {
+      width: 250px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    .search__label > .search__input {
+      width: 250px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,238 @@
+.header {
+  margin: 0 -15px;
+  border-bottom: 1px solid $color-gray;
+
+  &__container {
+    display: flex;
+
+    @include w($sm) {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include w($sm) {
+      display: block;
+      flex: 1 0 auto;
+    }
+  }
+
+  &__back {
+    display: none;
+  }
+
+  &__side {
+    border-right: 1px solid $color-gray;
+    padding: 6px 18px;
+    text-align: center;
+
+    @include w($xl) {
+      padding: 6px 7px;
+    }
+
+    @include w($sm) {
+      display: flex;
+      flex: 1 0 auto;
+      align-items: center;
+      justify-content: center;
+      border-right: none;
+    }
+  }
+
+  &__phones {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $color-black;
+
+    @include w($xl) {
+      font-size: 16px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    color: $color-accent;
+  }
+
+  &__timetable {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    color: $color-gray;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 15px;
+      height: 15px;
+      background-image: url("../../img/clock.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @include w($sm) {
+      padding-top: 20px;
+      max-width: 120px;
+
+      &::before {
+        left: 50%;
+        top: 0;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    padding: 26px 20px 26px 14px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-black;
+
+    @include w($xl) {
+      padding: 26px 5px;
+      font-size: 16px;
+    }
+
+    @include w($sm) {
+      display: block;
+      flex: 0 1 auto;
+    }
+
+    @include w($xsm) {
+      display: none;
+    }
+  }
+
+  &__sity {
+    margin-right: auto;
+    font-weight: 300;
+    font-size: 14px;
+    color: $color-gray;
+
+    span {
+      display: block;
+      font-weight: 400;
+      line-height: 1.4;
+      color: $color-darkblack;
+    }
+
+    @include w($sm) {
+      display: none;
+    }
+  }
+
+  &__review {
+    margin-right: 10px;
+
+    @include w($sm) {
+      display: none;
+    }
+  }
+
+  &__order {
+    font-weight: 400;
+    font-size: 18px;
+
+    @include w($sm) {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: 70px;
+
+    @include w($xl) {
+      margin-left: 10px;
+    }
+  }
+
+  &--mini {
+    position: relative;
+
+    .header__back {
+      position: absolute;
+      left: 100px;
+      top: 50%;
+      display: block;
+      padding-left: 30px;
+      font-weight: 500;
+      font-size: 18px;
+      color: $color-darkblack;
+      transform: translateY(-50%);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        background-color: $color-accent;
+        transform: translateY(-50%);
+        transition: transform 0.3s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        border-bottom: 1px solid $light-color;
+        border-left: 1px solid $light-color;
+        width: 5px;
+        height: 5px;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &:focus::before {
+        transform: translateY(-50%) rotate(-45deg) scale(1.2);
+      }
+
+      &:hover::before {
+        transform: translateY(-50%) rotate(-45deg) scale(1.2);
+      }
+
+      @include w($md) {
+        display: none;
+      }
+    }
+
+    .header__side {
+      display: inline-flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      align-items: center;
+      border-right: none;
+
+      @include w($md) {
+        flex-direction: row;
+      }
+    }
+
+    .header__main {
+      display: none;
+    }
+
+    .header__phones {
+      margin-bottom: 0;
+    }
+
+    .header__timetable {
+      display: inline-block;
+    }
+  }
+
+  @include w($sm) {
+    background-color: $light-color;
+  }
+}

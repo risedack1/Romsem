@@ -1,0 +1,168 @@
+.left-aside {
+  flex-shrink: 0;
+  padding-top: 26px;
+  padding-right: 40px;
+  width: 100%;
+  max-width: 200px;
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 26px;
+  }
+
+  &__nav {
+    border-top: 1px solid $color-gray;
+    padding-top: 31px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 3%;
+    top: 10px;
+    display: none;
+    border: 1px solid $color-black;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    background-color: $light-color;
+    transform: rotate(45deg);
+    transition: background-color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 90%;
+      height: 2px;
+      background-color: $color-black;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 2px;
+      height: 90%;
+      background-color: $color-black;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      background-color: rgb(17 17 17 / 10%);
+    }
+
+    @include w($xlg) {
+      display: block;
+    }
+  }
+
+  @include w($xlg) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    background-color: $color-gray-bg;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.nav {
+  font-weight: 400;
+  font-size: 24px;
+  color: $color-darkblack;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &--soon {
+      position: relative;
+
+      &::before {
+        content: "Скоро";
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 10px;
+        width: 50px;
+        height: 15px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 14px;
+        text-align: center;
+        color: $light-color;
+        background-color: #eb5757;
+      }
+    }
+
+    @include w($xlg) {
+      max-width: 200px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-left: 50px;
+    color: inherit;
+    background-position: left center;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+
+    &--pizza {
+      background-image: url("../img/nav-pizza.svg");
+    }
+
+    &--sets {
+      background-image: url("../img/nav-sets.svg");
+    }
+
+    &--wok {
+      background-image: url("../img/nav-wok.svg");
+    }
+
+    &--rolls {
+      background-image: url("../img/nav-rolls.svg");
+    }
+
+    &--sushi {
+      background-image: url("../img/nav-sushi.svg");
+    }
+
+    &--salat {
+      background-image: url("../img/nav-salat.svg");
+    }
+
+    &--soup {
+      background-image: url("../img/nav-soup.svg");
+    }
+
+    &--korndog {
+      background-image: url("../img/nav-corndog.svg");
+    }
+
+    &--drinks {
+      background-image: url("../img/nav-drinks.svg");
+    }
+
+    &--discount {
+      background-image: url("../img/nav-discount.svg");
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="container-lg container-lg--flex">
+    @include('partials/left-aside.html')
+    <div class="container container--flex">
+      @include('partials/header.html')
+      <main class="main">
+        @include('partials/hero-slider.html')
+        @include('partials/hero-gallery.html')
+        @include('partials/menu-slider.html')
+        @include('partials/info.html')
+      </main>
+
+      @include('partials/footer.html')
+      <!-- @include('html/h1.html') пример include -->
+    </div>
+    @include('partials/right-aside.html')
+  </div>
+</body>
+
+</html>

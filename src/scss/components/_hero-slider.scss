@@ -1,0 +1,89 @@
+.hero-slider {
+  position: relative;
+  padding: 30px 0;
+
+  &__item {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-right: 20px;
+    height: 490px;
+    max-width: 950px;
+    text-align: right;
+    background-position: left;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-color: $light-color;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 34px;
+    color: $color-black;
+  }
+
+  &__info {
+    display: block;
+    margin-bottom: 130px;
+    font-weight: 300;
+    font-size: 16px;
+    color: $color-accent;
+  }
+
+  &__old-price {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 26px;
+    color: $color-black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 3px;
+      background-color: $color-accent;
+      transform: translate(-50%, -50%) rotate(-10deg);
+    }
+  }
+
+  &__new-price {
+    margin-bottom: 140px;
+    font-weight: 700;
+    font-size: 34px;
+    color: $color-black;
+  }
+
+  &__button {
+    min-width: 270px;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  @include w($sm) {
+    display: none;
+  }
+}
+
+.hero-slider div.hero-slider__pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: auto;
+  transform: translateX(-50%);
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-accent;
+  }
+}

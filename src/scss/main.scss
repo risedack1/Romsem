@@ -1,0 +1,28 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// страницы
+@import "./pages/gallery";
+@import "./pages/reviews";
+@import "./pages/order-page";
+
+// подключения компонентов страницы
+@import "./components/card";
+@import "./components/header";
+@import "./components/left-aside";
+@import "./components/right-side";
+@import "./components/hero-slider";
+@import "./components/hero-gallery";
+@import "./components/menu-slider";
+@import "./components/info";
+@import "./components/footer";
+@import "./components/recomendation-slider";
+@import "./components/composition-slider";
+
+// блоки страниц
+@import "./components/forms";
+@import "./components/order-mini";
+@import "./components/menu-card";

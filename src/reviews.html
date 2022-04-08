@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="container-lg container-lg--flex">
+    @include('partials/left-aside.html')
+    <div class="container container--flex">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="reviews">
+          <div class="reviews__top">
+            <h2 class="reviews__title">
+              Отзывы
+            </h2>
+            <button class="reviews__button btn-reset">
+              + Добавить отзыв
+            </button>
+          </div>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <div class="reviews__item-top">
+                <span class="reviews__name">
+                  Розалия
+                </span>
+                <time class="reviews__time">
+                  02.24.21
+                </time>
+              </div>
+              <div class="reviews__item-content">
+                <p>
+                  Ваша доставка и ваши блюда лучшие в Харькове!) всегда очень вкусно, вовремя, всегда вежливые курьеры и
+                  девушки на телефоне
+                </p>
+              </div>
+            </li>
+            <li class="reviews__item">
+              <div class="reviews__item-top">
+                <span class="reviews__name">
+                  Елена
+                </span>
+                <time class="reviews__time">
+                  02.23.21
+                </time>
+              </div>
+              <div class="reviews__item-content">
+                <p>
+                  Ооочень вкусно!!!!!
+                </p>
+              </div>
+            </li>
+            <li class="reviews__item">
+              <div class="reviews__item-top">
+                <span class="reviews__name">
+                  Сергей Гаврилюк
+                </span>
+                <time class="reviews__time">
+                  02.23.21
+                </time>
+              </div>
+              <div class="reviews__item-content">
+                <p>
+                  Заказываем у Вас больше 2 -ух лет, были разные ситуации, но сервис стал лучше, суши вкуснее. За
+                  доставку сегодня на время, огромное спасибо, точь-в-точь в минута в минуту. Успехов Вам и приятных
+                  бонусов нам )
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      @include('partials/footer.html')
+      <!-- @include('html/h1.html') пример include -->
+    </div>
+    @include('partials/right-aside.html')
+  </div>
+</body>
+
+</html>

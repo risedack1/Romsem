@@ -1,0 +1,282 @@
+.footer {
+  margin: 0 auto;
+  border-top: 1px solid $color-gray;
+  padding: 22px 0 0;
+  width: 100%;
+  max-width: 950px;
+
+  &__wrapper {
+    display: flex;
+
+    @include w($sm) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__part {
+    flex: 1 0 33.333%;
+    padding-top: 5px;
+    padding-bottom: 60px;
+
+    &:not(:last-child) {
+      border-right: 1px solid $color-gray;
+
+      @include w($sm) {
+        border-right: none;
+      }
+    }
+
+    &:first-child {
+      @include w($sm) {
+        display: none;
+      }
+    }
+
+    @include w($xl) {
+      flex-shrink: 1;
+    }
+
+    @include w($sm) {
+      padding: 15px 0;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include w($xl) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: $color-darkblack;
+
+    @include w($xl) {
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    padding-left: 40px;
+
+    @include w($xl) {
+      padding-left: 10px;
+    }
+
+    @include w($sm) {
+      padding-left: 0;
+    }
+  }
+
+  &__legend {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-darkblack;
+
+    @include w($sm) {
+      display: none;
+    }
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: transparent;
+
+    &::placeholder {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.2;
+      color: $color-gray;
+    }
+
+    @include w($xl) {
+      font-size: 16px;
+    }
+
+    @include w($sm) {
+      display: none;
+    }
+  }
+
+  &__messenger-capture {
+    display: block;
+    margin-bottom: 10px;
+    max-width: 212px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-gray;
+
+    @include w($xl) {
+      font-size: 16px;
+    }
+  }
+
+  &__messenger-list {
+    display: flex;
+
+    @include w($sm) {
+      justify-content: center;
+    }
+  }
+
+  &__messenger-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include w($xl) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__info {
+    padding-left: 40px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: $color-gray;
+
+    @include w($xl) {
+      padding-left: 10px;
+      font-size: 16px;
+    }
+
+    @include w($sm) {
+      padding-left: 0;
+    }
+  }
+
+  &__phone {
+    display: block;
+
+    span {
+      text-decoration: underline;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  .custom-checkbox {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    &__field {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 1;
+      visibility: hidden;
+
+      &:checked ~ .custom-checkbox__content {
+        opacity: 1;
+      }
+    }
+
+    &__content {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &--whatsapp {
+        background-image: url("../../img/whatsapp.svg");
+      }
+
+      &--telegram {
+        background-image: url("../../img/telegram.svg");
+      }
+
+      &--instagram {
+        background-image: url("../../img/instagram.svg");
+      }
+    }
+  }
+
+  @include w($xlg) {
+    padding-bottom: 100px;
+  }
+
+  @include w($sm) {
+    border-top: none;
+  }
+}
+
+.small-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  margin-right: -15px;
+  margin-left: -15px;
+  border-top: 1px solid $color-gray;
+  padding: 11px 0;
+  background-color: $light-color;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    padding-top: 39px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-black;
+
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 34px;
+      height: 34px;
+      fill: $color-accent;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include w($xlg) {
+    display: block;
+  }
+}

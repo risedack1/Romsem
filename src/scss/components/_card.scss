@@ -1,0 +1,341 @@
+.card {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $color-darkblack;
+
+    @include w($xl) {
+      padding: 20px 10px;
+    }
+
+    @include w($sm) {
+      padding: 20px 0;
+    }
+  }
+
+  &__prev {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      background-color: $color-accent;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      border-bottom: 1px solid $light-color;
+      border-left: 1px solid $light-color;
+      width: 5px;
+      height: 5px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:focus::before {
+      transform: translateY(-50%) rotate(-45deg) scale(1.2);
+    }
+
+    &:hover::before {
+      transform: translateY(-50%) rotate(-45deg) scale(1.2);
+    }
+  }
+
+  &__next {
+    position: relative;
+    padding-right: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      background-color: $color-accent;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      border-right: 1px solid $light-color;
+      border-bottom: 1px solid $light-color;
+      width: 5px;
+      height: 5px;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: width 0.3s, height 0.3s;
+    }
+
+    &:focus::before {
+      transform: translateY(-50%) rotate(-45deg) scale(1.2);
+    }
+
+    &:hover::before {
+      transform: translateY(-50%) rotate(-45deg) scale(1.2);
+    }
+  }
+}
+
+.card-item {
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 -15px;
+  padding: 20px 0 0;
+  padding-right: 150px;
+  background-color: $light-color;
+
+  &__image-wrapper {
+    grid-column: 7 span;
+    padding: 0 60px;
+    padding-top: 10px;
+
+    @include w(1500px) {
+      grid-column: 5 span;
+      padding: 10px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__content {
+    display: grid;
+    justify-self: flex-start;
+    grid-column: 5 span;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include w(1500px) {
+      grid-column: 7 span;
+    }
+  }
+
+  &__title {
+    @include line-clamp(2);
+
+    // margin-bottom: 10px;
+    grid-column: 3 span;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.3;
+    color: $color-darkblack;
+
+    @include w($md) {
+      margin-bottom: 10px;
+      max-width: 180px;
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    grid-column: 3 span;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 18px;
+    color: $color-accent;
+
+    @include w($xl) {
+      margin-bottom: 0;
+    }
+
+    @include w($md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__price {
+    align-self: center;
+    grid-column: 1 span;
+    width: 130px;
+    font-weight: 700;
+    font-size: 24px;
+    color: $color-darkblack;
+
+    @include w($xsm) {
+      width: 90px;
+    }
+
+    @include w($md) {
+      order: 1;
+    }
+
+    @include w($xsm) {
+      font-size: 16px;
+    }
+  }
+
+  &__counter {
+    grid-column: 1 span;
+
+    .counter__minus {
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        width: 21px;
+      }
+    }
+
+    .counter__plus {
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        width: 21px;
+      }
+
+      &::after {
+        height: 21px;
+      }
+    }
+
+    .counter__items {
+      font-size: 36px;
+    }
+
+    @include w($md) {
+      order: 0;
+      grid-column: 3 span;
+    }
+  }
+
+  &__composition {
+    grid-column: 1/4;
+    margin-top: 22px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-black;
+
+    @include w($xl) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    @include w($md) {
+      display: none;
+    }
+  }
+
+  &__composition-list {
+    grid-column: 1/4;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  &__button {
+    grid-column: 2 span;
+    width: 188px;
+
+    @include w($md) {
+      order: 2;
+      width: 150px;
+    }
+
+    @include w($xsm) {
+      justify-self: flex-end;
+    }
+  }
+
+  @include w(1500px) {
+    padding-right: 10px;
+  }
+
+  @include w($md) {
+    display: block;
+    padding-left: 10px;
+  }
+
+  @include w($sm) {
+    margin: 0;
+    border-radius: 15px;
+  }
+}
+
+.graph-modal__container--card {
+  margin: 20px auto;
+  padding: 20px 30px;
+}
+
+.graph-modal__container--blink {
+  animation-name: modal-blink;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes modal-blink {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.graph-modal__close--card {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  border: 1px solid $color-black;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  background-color: $light-color;
+  transform: translateX(-50%) rotate(45deg);
+  transition: background-color 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 2px;
+    background-color: $color-black;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 90%;
+    background-color: $color-black;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background-color: rgb(17 17 17 / 10%);
+  }
+}

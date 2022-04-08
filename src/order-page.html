@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="container-lg container-lg--flex container-lg--order-page">
+    <div class="container container--flex">
+      @include('partials/header.html',{
+      "modificate": "header--mini",
+      })
+      <main class="main">
+        <div class="order-page">
+          <h2 class="order-page__title">
+            Ваши данные
+          </h2>
+          <form action="#" class="order-page__form order-form">
+            <div class="order-form__left">
+              <input class="order-form__input order-form__input--phone" type="tel" name="Телефон" placeholder="Телефон"
+                aria-label="Введите имя" required>
+
+              <input class="order-form__input order-form__input--name" type="name" name="Имя" placeholder="Имя"
+                aria-label="Введите имя" required>
+
+              <label class="custom-checkbox order-form__checkbox order-form__checkbox--price-type">
+                <input type="radio" class="custom-checkbox__field" name="price-type" required>
+                <span class="custom-checkbox__content">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#cash"></use>
+                  </svg>
+                  Наличными
+                </span>
+              </label>
+              <label class="custom-checkbox order-form__checkbox order-form__checkbox--price-type">
+                <input type="radio" class="custom-checkbox__field" name="price-type" required>
+                <span class="custom-checkbox__content">
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#card"></use>
+                  </svg>
+                  Картой
+                </span>
+              </label>
+
+              <label class="custom-checkbox order-form__rest">
+                <input type="checkbox" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">
+                  Подготовить сдачу с
+                </span>
+              </label>
+              <input class="order-form__input order-form__input--rest" name="сдача" placeholder="Сумма"
+                aria-label="Введите сумму сдачи" type="number">
+
+              <input class="order-form__input order-form__input--comment" name="Комментарий"
+                placeholder="Комменатрий к заказу" aria-label="Напишите комментарий к заказу" type="text">
+
+              <div class="order-form__more-info">
+                <div class="order-form__more-info-item">
+                  <span class="order-form__more-info-text">
+                    Палочки + соусник обычные
+                  </span>
+                  <div class="order-form__counter counter">
+                    <button class="counter__minus btn-reset" type="button"></button>
+                    <span class="counter__items">
+                      10
+                    </span>
+                    <button class="counter__plus btn-reset" type="button"></button>
+                  </div>
+                </div>
+                <div class="order-form__more-info-item">
+                  <span class="order-form__more-info-text">
+                    Палочки + соусник обычные
+                  </span>
+                  <div class="order-form__counter counter">
+                    <button class="counter__minus btn-reset" type="button"></button>
+                    <span class="counter__items">
+                      10
+                    </span>
+                    <button class="counter__plus btn-reset" type="button"></button>
+                  </div>
+                </div>
+              </div>
+              <input class="order-form__input order-form__input--promo" name="промокод" placeholder="Введите промокод"
+                aria-label="Введите промокод" type="text">
+            </div>
+            <div class="order-form__right">
+              <label class="custom-checkbox order-form__checkbox order-form__checkbox--delivery-type">
+                <input type="radio" name="delivery-type" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">
+                  Курьером
+                </span>
+              </label>
+
+              <label class="custom-checkbox order-form__checkbox order-form__checkbox--delivery-type">
+                <input type="radio" name="delivery-type" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">
+                  Самовывоз
+                </span>
+              </label>
+
+              <input class="order-form__input order-form__input--street" type="text" name="Введите название улицы"
+                placeholder="Улица" aria-label="Введите название улицы" required>
+
+              <input class="order-form__input order-form__input--home order-form__input--address-info" type="number"
+                name="Номер дома" placeholder="Дом" aria-label="Введите номер дома" required>
+
+              <input class="order-form__input order-form__input--address-info" type="number" name="номер квартиры"
+                placeholder="Кв" aria-label="Введите номер квартиры" required>
+
+              <input class="order-form__input order-form__input--address-info" type="number" name="номер подьезда"
+                placeholder="Подьезд" aria-label="введите номер подьезда">
+
+              <input class="order-form__input order-form__input--address-info" type="number" name="этаж"
+                placeholder="Этаж" aria-label="введите этаж">
+
+              <input class="order-form__input order-form__input--address-info" type="number" name="код домофона"
+                placeholder="Код" aria-label="введите код от домофона">
+
+              <label class="custom-checkbox order-form__checkbox order-form__checkbox--time">
+                <input type="radio" name="time" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">
+                  На сейчас
+                </span>
+              </label>
+              <label class="custom-checkbox order-form__checkbox order-form__checkbox--time">
+                <input type="radio" name="time" class="custom-checkbox__field">
+                <span class="custom-checkbox__content">
+                  На время
+                </span>
+              </label>
+              <input class="order-form__input order-form__input--email" name="email" type="email"
+                placeholder="E-mail(необязательно)" aria-label="Введите E-mail(необязательно)">
+            </div>
+            <button class="order-form__button button btn-reset" type="submit">
+              Оформить заказ
+            </button>
+          </form>
+          <div class="order-page__info">
+            Нажимая на кнопку Оформить заказ, Вы подтверждаете свое согласие на обработку персональных данных в
+            соответствии с <a class="order-page__agreement" href="#">Публичной оффертой</a>
+          </div>
+        </div>
+      </main>
+
+      @include('partials/footer.html')
+      <!-- @include('html/h1.html') пример include -->
+    </div>
+    @include('partials/right-aside.html')
+  </div>
+</body>
+
+</html>

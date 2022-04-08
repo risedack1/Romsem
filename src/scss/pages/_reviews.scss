@@ -1,0 +1,69 @@
+.reviews {
+  margin: 0 auto;
+  padding-bottom: 100px;
+  max-width: 1110px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 44px;
+
+    @include w($sm) {
+      padding: 30px 0;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    color: $color-black;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 7px 5px;
+    min-width: 180px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-gray-bg;
+    background-color: $color-darkblack;
+  }
+
+  &__item {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: $light-color;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-top {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    margin-right: 17px;
+    font-weight: 500;
+    font-size: 24px;
+    color: $color-black;
+  }
+
+  &__time {
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-gray;
+  }
+
+  &__item-content {
+    max-width: 717px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-darkblack;
+  }
+}
