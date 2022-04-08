@@ -13,11 +13,11 @@ cardNext.addEventListener('click', (e) => {
     const currentCard = target.closest('.card');
     const currentCardId = currentCard.querySelector('.card-item').getAttribute('data-id');
 
-    const cardsWrapper = document.querySelector('.gallery__inner');
-    const currentCardItem = cardsWrapper.querySelector(`[data-id="${currentCardId}"]`).closest('.gallery__item');
+    const cardsWrapper = document.querySelector('.menu-card-wrapper');
+    const currentCardItem = cardsWrapper.querySelector(`[data-id="${currentCardId}"]`).closest('.menu-card-item');
 
     if (currentCardItem.nextElementSibling) {
-      const nextCard = currentCardItem.nextElementSibling.querySelector('.gallery__card');
+      const nextCard = currentCardItem.nextElementSibling.querySelector('.menu-card');
 
       // Карточка товара
       const cardItem = document.querySelector('.card-item');
@@ -69,11 +69,11 @@ cardPrev.addEventListener('click', (e) => {
     const currentCard = target.closest('.card');
     const currentCardId = currentCard.querySelector('.card-item').getAttribute('data-id');
 
-    const cardsWrapper = document.querySelector('.gallery__inner');
-    const currentCardItem = cardsWrapper.querySelector(`[data-id="${currentCardId}"]`).closest('.gallery__item');
+    const cardsWrapper = document.querySelector('.menu-card-wrapper');
+    const currentCardItem = cardsWrapper.querySelector(`[data-id="${currentCardId}"]`).closest('.menu-card-item');
 
     if (currentCardItem.previousElementSibling) {
-      const prevCard = currentCardItem.previousElementSibling.querySelector('.gallery__card');
+      const prevCard = currentCardItem.previousElementSibling.querySelector('.menu-card');
 
       // Карточка товара
       const cardItem = document.querySelector('.card-item');

@@ -29,6 +29,15 @@
     font-size: 18px;
     color: $color-gray-bg;
     background-color: $color-darkblack;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(63 62 62);
+    }
+
+    &:active {
+      background-color: $color-black;
+    }
   }
 
   &__item {

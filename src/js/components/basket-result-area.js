@@ -3,12 +3,45 @@ window.addEventListener('click', (e) => {
 
   if (target.classList.contains('counter__minus') && target.closest('.basket__list')) {
     changeResult();
+    changeUpButtonCounter();
   } else if (target.classList.contains('counter__plus') && target.closest('.basket__list')) {
     changeResult();
+    changeUpButtonCounter();
   } else if (target.classList.contains('card-item__button')) {
     changeResult();
+    changeUpButtonCounter();
   }
 });
+
+const basketButton = document.querySelector('.up-button');
+
+if (window.innerWidth > 1100) {
+  window.addEventListener('scroll', () => {
+    const heightwindow = window.innerHeight / 2;
+    let scrollHeight = Math.abs(document.documentElement.getBoundingClientRect().top);
+
+    if (scrollHeight > heightwindow) {
+      basketButton.classList.add('up-button--active');
+    } else {
+      basketButton.classList.remove('up-button--active');
+    }
+  });
+}
+
+basketButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+});
+
+function changeUpButtonCounter() {
+  const basketItems = document.querySelectorAll('.basket__order-mini');
+  const upBasketCounter = document.querySelector('.up-button__counter');
+
+  upBasketCounter.innerText = basketItems.length;
+}
 
 function changeResult() {
   const basketItems = document.querySelectorAll('.basket__order-mini');
@@ -69,9 +102,6 @@ function changeResult() {
 
     resultTotalPrice.innerText = +resultPrice.textContent + parseInt(resultDeliveryPrice.textContent);
   }
-
-  console.log(+resultPrice.innerText);
-  console.log(parseInt(resultDeliveryPrice.textContent));
 
   totalOfferPrice.innerText = resultTotalPrice.textContent;
 }
