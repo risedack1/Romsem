@@ -170,12 +170,43 @@ window.addEventListener('click', function (e) {
 
   if (target.classList.contains('counter__minus') && target.closest('.basket__list')) {
     changeResult();
+    changeUpButtonCounter();
   } else if (target.classList.contains('counter__plus') && target.closest('.basket__list')) {
     changeResult();
+    changeUpButtonCounter();
   } else if (target.classList.contains('card-item__button')) {
     changeResult();
+    changeUpButtonCounter();
   }
 });
+var basketButton = document.querySelector('.up-button');
+
+if (window.innerWidth > 1100) {
+  window.addEventListener('scroll', function () {
+    var heightwindow = window.innerHeight / 2;
+    var scrollHeight = Math.abs(document.documentElement.getBoundingClientRect().top);
+
+    if (scrollHeight > heightwindow) {
+      basketButton.classList.add('up-button--active');
+    } else {
+      basketButton.classList.remove('up-button--active');
+    }
+  });
+}
+
+basketButton.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+});
+
+function changeUpButtonCounter() {
+  var basketItems = document.querySelectorAll('.basket__order-mini');
+  var upBasketCounter = document.querySelector('.up-button__counter');
+  upBasketCounter.innerText = basketItems.length;
+}
 
 function changeResult() {
   var basketItems = document.querySelectorAll('.basket__order-mini'); // Поле результата
@@ -224,8 +255,6 @@ function changeResult() {
     resultTotalPrice.innerText = +resultPrice.textContent + parseInt(resultDeliveryPrice.textContent);
   }
 
-  console.log(+resultPrice.innerText);
-  console.log(parseInt(resultDeliveryPrice.textContent));
   totalOfferPrice.innerText = resultTotalPrice.textContent;
 }
 
@@ -312,11 +341,11 @@ cardNext.addEventListener('click', function (e) {
   setTimeout(function () {
     var currentCard = target.closest('.card');
     var currentCardId = currentCard.querySelector('.card-item').getAttribute('data-id');
-    var cardsWrapper = document.querySelector('.gallery__inner');
-    var currentCardItem = cardsWrapper.querySelector("[data-id=\"".concat(currentCardId, "\"]")).closest('.gallery__item');
+    var cardsWrapper = document.querySelector('.menu-card-wrapper');
+    var currentCardItem = cardsWrapper.querySelector("[data-id=\"".concat(currentCardId, "\"]")).closest('.menu-card-item');
 
     if (currentCardItem.nextElementSibling) {
-      var nextCard = currentCardItem.nextElementSibling.querySelector('.gallery__card'); // Карточка товара
+      var nextCard = currentCardItem.nextElementSibling.querySelector('.menu-card'); // Карточка товара
 
       var cardItem = document.querySelector('.card-item');
       var cardImage = cardItem.querySelector('picture');
@@ -353,11 +382,11 @@ cardPrev.addEventListener('click', function (e) {
   var animationBlink = setTimeout(function () {
     var currentCard = target.closest('.card');
     var currentCardId = currentCard.querySelector('.card-item').getAttribute('data-id');
-    var cardsWrapper = document.querySelector('.gallery__inner');
-    var currentCardItem = cardsWrapper.querySelector("[data-id=\"".concat(currentCardId, "\"]")).closest('.gallery__item');
+    var cardsWrapper = document.querySelector('.menu-card-wrapper');
+    var currentCardItem = cardsWrapper.querySelector("[data-id=\"".concat(currentCardId, "\"]")).closest('.menu-card-item');
 
     if (currentCardItem.previousElementSibling) {
-      var prevCard = currentCardItem.previousElementSibling.querySelector('.gallery__card'); // Карточка товара
+      var prevCard = currentCardItem.previousElementSibling.querySelector('.menu-card'); // Карточка товара
 
       var cardItem = document.querySelector('.card-item');
       var cardImage = cardItem.querySelector('picture');

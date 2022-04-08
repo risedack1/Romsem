@@ -82,7 +82,7 @@
       <header class="header @modificate">
   <div class="container header__container">
     <a class="header__logo logo logo--mini" href="./index.html">
-      <img class="logo__image" src="../img/logo-mini.png" alt="ROMSEM логотип">
+      <img class="logo__image" src="./img/logo-mini.png" alt="ROMSEM логотип">
     </a>
     <a class="header__back" href="./gallery.html">
       Продолжить выбор
@@ -109,7 +109,7 @@
         Доставка и оплата
       </button>
       <form class="header__search search" action="#">
-        <button class="search__button btn-reset">
+        <button class="search__button btn-reset" type="button">
         </button>
         <label class="search__label">
           <input class="search__input" type="text">
@@ -338,9 +338,9 @@
   <div class="map">
     <div class="map__wrapper">
       <picture>
-        <source srcset="../img/map.avif" type="image/avif">
-        <source srcset="../img/map.webp" type="image/webp">
-        <img loading="lazy" src="../img/map.jpg." class="image" alt="карта">
+        <source srcset="./img/map.avif" type="image/avif">
+        <source srcset="./img/map.webp" type="image/webp">
+        <img loading="lazy" src="./img/map.jpg." class="image" alt="карта">
       </picture>
     </div>
     <div class="map__note">
@@ -348,6 +348,13 @@
       <span>И узнайте время доставки</span>
     </div>
   </div>
+  <button class="right-aside__up-button up-button btn-reset">
+    <span class="visually-hidden">Поднятся вверх к корзине</span>
+    <span class="right-aside__up-button up-button__counter">0</span>
+    <svg class="">
+      <use xlink:href="img/sprite.svg#footer-thrasher"></use>
+    </svg>
+  </button>
 </div>
 
   </div>
