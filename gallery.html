@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>ROMSEM доставка суши</title>
+  <link rel="preload" href="fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="container-lg container-lg--flex">
+    <aside class="left-aside">
+  <button class="left-aside__close" type="button"></button>
+  <a class="left-aside__logo logo" href="./index.html">
+    <img class="logo__image" src="./img/logo.svg" alt="ROMSEM доставка суши">
+  </a>
+  <nav class="left-aside__nav nav" title="Выбор меню">
+    <ul class="nav__list list-reset">
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--pizza hover-string">
+          Пицца
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--sets hover-string">
+          Сеты
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--wok hover-string">
+          WOK
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--rolls hover-string">
+          Роллы
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--sushi hover-string">
+          Суши
+        </a>
+      </li>
+      <li class="nav__item nav__item--soon">
+        <a href="./gallery.html" class="nav__link nav__link--salat hover-string">
+          Салаты
+        </a>
+      </li>
+      <li class="nav__item nav__item--soon">
+        <a href="./gallery.html" class="nav__link nav__link--soup hover-string">
+          Супы
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--korndog hover-string">
+          Корн доги
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--drinks hover-string">
+          Напитки
+        </a>
+      </li>
+      <li class="nav__item">
+        <a href="./gallery.html" class="nav__link nav__link--discount hover-string">
+          Акции
+        </a>
+      </li>
+    </ul>
+    </ul>
+  </nav>
+</aside>
+
+    <div class="container container--flex">
+      <header class="header @modificate">
+  <div class="container header__container">
+    <a class="header__logo logo logo--mini" href="./index.html">
+      <img class="logo__image" src="../img/logo-mini.png" alt="ROMSEM логотип">
+    </a>
+    <a class="header__back" href="./gallery.html">
+      Продолжить выбор
+    </a>
+    <div class="header__side">
+      <div class="header__phones">
+        <span>Наш телефон</span>
+        <a class="header__phone" href="tel:+996705188955">+996 705 188 955</a>
+        <a class="header__phone" href="tel:+996705188955">+996 705 188 955</a>
+      </div>
+      <div class="header__timetable">
+        работаем с 10:00 до 00:00
+      </div>
+    </div>
+    <div class="header__main">
+      <div class="header__sity">
+        Город:
+        <span>Бишкек</span>
+      </div>
+      <a class="header__review hover-string" href="./reviews.html">
+        Отзывы
+      </a>
+      <button class="header__order btn-reset hover-string">
+        Доставка и оплата
+      </button>
+      <form class="header__search search" action="#">
+        <button class="search__button btn-reset">
+        </button>
+        <label class="search__label">
+          <input class="search__input" type="text">
+        </label>
+      </form>
+    </div>
+  </div>
+</header>
+
+      <main class="main">
+        <section class="gallery">
+          <div class="gallery__top">
+            <h2 class="gallery__title">
+              Сеты
+            </h2>
+            <div class="gallery__sort">
+              <button class="gallery__sort-button btn-reset" type="button">
+                Сортировка
+              </button>
+              <ul class="gallery__sort-list">
+                <li class="gallery__sort-item">
+                  <button class="gallery__sort-item-button btn-reset" data-sort="toExpensive">
+                    от дешевых к дорогим
+                  </button>
+                </li>
+                <li class="gallery__sort-item">
+                  <button class="gallery__sort-item-button btn-reset" data-sort="toCheap">
+                    от дорогих к дешевым
+                  </button>
+                </li>
+                <li class="gallery__sort-item">
+                  <button class="gallery__sort-item-button btn-reset" data-sort="toLarge">
+                    по возрастанию порции
+                  </button>
+                </li>
+                <li class="gallery__sort-item">
+                  <button class="gallery__sort-item-button btn-reset" data-sort="toSmall">
+                    по убыванию порции
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="gallery__inner">
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="01">
+                <picture>
+                  <source srcset="../img/dishes/dishes-3.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-3.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-3.png" class="image"
+                    alt="Саломон сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Саломон сет
+                </h3>
+                <span class="menu-card__info">
+                  1050 грамм, <span class="menu-card__peaces">30 кусочков</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1500 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="02">
+                <picture>
+                  <source srcset="../img/dishes/dishes-4.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-4.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-4.png" class="image"
+                    alt="Саломон сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Саломон сет
+                </h3>
+                <span class="menu-card__info">
+                  1050 грамм, <span class="menu-card__peaces">30 кусочков</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1500 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="03">
+                <picture>
+                  <source srcset="../img/dishes/dishes-5.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-5.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-5.png" class="image"
+                    alt="Филадельфия и лосось сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Филадельфия и лосось сет
+                </h3>
+                <span class="menu-card__info">
+                  1260 грамм <span class="menu-card__peaces">36 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1499 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="04">
+                <picture>
+                  <source srcset="../img/dishes/dishes-6.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-6.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-6.png" class="image"
+                    alt="Сет '6 Филадельфий'">
+                </picture>
+                <h3 class="menu-card__title">
+                  Сет «6 Филадельфий»
+                </h3>
+                <span class="menu-card__info">
+                  1320 грамм <span class="menu-card__peaces">46 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1559 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="05">
+                <picture>
+                  <source srcset="../img/dishes/dishes-7.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-7.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-7.png" class="image"
+                    alt="Саломон сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Топовый сет
+                </h3>
+                <span class="menu-card__info">
+                  1020 грамм <span class="menu-card__peaces">40 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1519 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="06">
+                <picture>
+                  <source srcset="../img/dishes/dishes-8.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-8.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-8.png" class="image"
+                    alt="Камикадзе сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Камикадзе сет
+                </h3>
+                <span class="menu-card__info">
+                  1200 грамм <span class="menu-card__peaces">52 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1469 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="07">
+                <picture>
+                  <source srcset="../img/dishes/dishes-9.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-9.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-9.png" class="image"
+                    alt="Сет '4 Филадельфии'">
+                </picture>
+                <h3 class="menu-card__title">
+                  Сет «4 Филадельфии»
+                </h3>
+                <span class="menu-card__info">
+                  1100 грамм <span class="menu-card__peaces">32 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1559 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="08">
+                <picture>
+                  <source srcset="../img/dishes/dishes-10.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-10.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-10.png" class="image"
+                    alt="Филадельфия LOVE сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Филадельфия LOVE сет
+                </h3>
+                <span class="menu-card__info">
+                  1000 грамм <span class="menu-card__peaces">40 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1479 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="gallery__item">
+              <article class="gallery__card menu-card" data-id="09">
+                <picture>
+                  <source srcset="../img/dishes/dishes-4.avif" type="image/avif">
+                  <source srcset="../img/dishes/dishes-4.webp" type="image/webp">
+                  <img class="menu-card__image" loading="lazy" src="../img/dishes/dishes-4.png" class="image"
+                    alt="Саломон сет">
+                </picture>
+                <h3 class="menu-card__title">
+                  Якудза сет
+                </h3>
+                <span class="menu-card__info">
+                  1270 грамм <span class="menu-card__peaces">50 кусочек</span>
+                </span>
+                <div class="menu-card__bottom">
+                  <span class="menu-card__price">
+                    1499 СОМ
+                  </span>
+                  <button class="menu-card__link button btn-reset" data-graph-path="product-modal">
+                    Хочу!
+                  </button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <div class="info">
+  <h2 class="info__title">
+    Заказать суши в Бишкеке
+  </h2>
+  <div class="info__content-wrapper">
+    <div class="info__content">
+      <p>
+        Ресторан «Суши и Лапша» предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по
+        классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы
+        ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.
+      </p>
+      <p>
+        Ресторан «Суши и Лапша» предлагаем своим клиентам самые вкусные суши с доставкой на дом, приготовленные по
+        классическим и адаптированным к европейской аудитории рецептам, а также собственным наработкам наших поваров. Мы
+        ценим время наших клиентов, поэтому вы можете заказать суши в Харькове с доставкой на дом или в офис.
+      </p>
+      <h3>В нашем меню более 20 видов суши:</h3>
+      <ul>
+        <li>Классические с сырым лососем, тунцом, окунем.</li>
+        <li>Экзотические с тигровой креветкой, морским гребешком.</li>
+        <li>Пикантные с копченым лососем, угрем.</li>
+      </ul>
+      <p>
+        В меню также представлены гунканы: с начинкой из красной икры и тобико, а также феликсы, где японский майонез
+        сочетается с рыбой, морепродуктами, угрем. Любители острых блюд могут купить суши с соусом спайси. Популярные
+        начинки — копченая курица, снежный краб, креветки, гребешки, тунец, лосось и окунь.
+      </p>
+    </div>
+  </div>
+  <div class="info__more-wrapper">
+    <button class="info__more btn-reset">
+      Подробнее
+    </button>
+  </div>
+</div>
+
+        <div class="graph-modal">
+          <div class="graph-modal__container graph-modal__container--card" role="dialog" aria-modal="true"
+            data-graph-target="product-modal">
+            <button class="btn-reset graph-modal__close graph-modal__close--card" aria-label="Закрыть модальное окно">
+
+            </button>
+            <div class="graph-modal__content graph-modal__content--card">
+              <section class="card">
+                <div class="card__top">
+                  <button class="card__prev btn-reset hover-string">Назад</button>
+                  <button class="card__next btn-reset hover-string">Вперед</button>
+                </div>
+                <article class="card__inner card-item" data-id="01">
+                  <div class="card-item__image-wrapper">
+                    <picture>
+                      <source srcset="./img/dishes/dishes-3.avif" type="image/avif">
+                      <source srcset="./img/dishes/dishes-3.webp" type="image/webp">
+                      <img class="card-item__image" loading="lazy" src="./img/dishes/dishes-3.png" class="image"
+                        alt="филадельфия и сет лосось">
+                    </picture>
+                  </div>
+                  <div class="card-item__content">
+                    <h2 class="card-item__title">
+                      Филадельфия и
+                      лосось сет
+                    </h2>
+                    <p class="card-item__info">
+                      1290 грамм
+                      <span class="card-item__info-piaces">
+                        36 кусочек
+                      </span>
+                    </p>
+                    <div class="card-item__price">
+                      1150 СОМ
+                    </div>
+                    <div class="card-item__counter">
+                      <div class="card-item__counter counter">
+                        <button class="counter__minus btn-reset"></button>
+                        <span class="counter__items">
+                          0
+                        </span>
+                        <button class="counter__plus btn-reset"></button>
+                      </div>
+                    </div>
+                    <div class="card-item__composition">
+                      Состав
+                      <p class="card-item__composition-list">
+                        Лосось, сыр «Филадельфия», огурец, авокадо
+                      </p>
+                    </div>
+                    <button class="card-item__button button btn-reset">
+                      Хочу!
+                    </button>
+                  </div>
+                </article>
+
+                <div class="card__recomendation recomendation">
+                  <div class="recomendation__title">
+                    Рекомендуем к этому товару
+                  </div>
+                  <div class="recomendation__slider-wrapper">
+                    <div class="swiper recomendation__slider">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <article class="recomendation__card recomendation-card">
+                            <div class="recomendation-card__image-wrapper">
+                              <picture>
+                                <source srcset="./img/recomendation/recomendation-1.avif" type="image/avif">
+                                <source srcset="./img/recomendation/recomendation-1.webp" type="image/webp">
+                                <img class="recomandation-card__image" loading="lazy"
+                                  src="./img/recomendation/recomendation-1.jpg" class="image" alt="филадельфия">
+                              </picture>
+                            </div>
+                            <h3 class="recomendation-card__title">
+                              Филадельфия
+                            </h3>
+                            <div class="recomendation-card__price-wrapper">
+                              <span class="recomendation-card__price">
+                                140 СОМ
+                              </span>
+                              <button class="recomendation-card__plus btn-reset"></button>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="swiper-slide">
+                          <article class="recomendation__card recomendation-card">
+                            <div class="recomendation-card__image-wrapper">
+                              <picture>
+                                <source srcset="./img/recomendation/recomendation-1.avif" type="image/avif">
+                                <source srcset="./img/recomendation/recomendation-1.webp" type="image/webp">
+                                <img class="recomandation-card__image" loading="lazy"
+                                  src="./img/recomendation/recomendation-1.jpg" class="image" alt="филадельфия">
+                              </picture>
+                            </div>
+                            <h3 class="recomendation-card__title">
+                              Филадельфия
+                            </h3>
+                            <div class="recomendation-card__price-wrapper">
+                              <span class="recomendation-card__price">
+                                140 СОМ
+                              </span>
+                              <button class="recomendation-card__plus btn-reset"></button>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="swiper-slide">
+                          <article class="recomendation__card recomendation-card">
+                            <div class="recomendation-card__image-wrapper">
+                              <picture>
+                                <source srcset="./img/recomendation/recomendation-1.avif" type="image/avif">
+                                <source srcset="./img/recomendation/recomendation-1.webp" type="image/webp">
+                                <img class="recomandation-card__image" loading="lazy"
+                                  src="./img/recomendation/recomendation-1.jpg" class="image" alt="филадельфия">
+                              </picture>
+                            </div>
+                            <h3 class="recomendation-card__title">
+                              Филадельфия
+                            </h3>
+                            <div class="recomendation-card__price-wrapper">
+                              <span class="recomendation-card__price">
+                                140 СОМ
+                              </span>
+                              <button class="recomendation-card__plus btn-reset"></button>
+                            </div>
+                          </article>
+                        </div>
+                        <div class="swiper-slide">
+                          <article class="recomendation__card recomendation-card">
+                            <div class="recomendation-card__image-wrapper">
+                              <picture>
+                                <source srcset="./img/recomendation/recomendation-1.avif" type="image/avif">
+                                <source srcset="./img/recomendation/recomendation-1.webp" type="image/webp">
+                                <img class="recomandation-card__image" loading="lazy"
+                                  src="./img/recomendation/recomendation-1.jpg" class="image" alt="филадельфия">
+                              </picture>
+                            </div>
+                            <h3 class="recomendation-card__title">
+                              Филадельфия
+                            </h3>
+                            <div class="recomendation-card__price-wrapper">
+                              <span class="recomendation-card__price">
+                                140 СОМ
+                              </span>
+                              <button class="recomendation-card__plus btn-reset"></button>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__part">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link hover-string" href="#">
+            О компании
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link hover-string" href="#">
+            Доставка и оплата
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link hover-string" href="#">
+            Лента материалов
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link hover-string" href="#">
+            Политика возврата
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__part">
+      <form action="#" class="footer__form">
+        <legend class="footer__legend">
+          Введите номер
+        </legend>
+        <input class="footer__input" name="footer-tel" id="footer-input" type="tel" placeholder="+996 (__) ___ __ __"
+          required>
+        <span class="footer__messenger-capture">
+          Выберите удобный
+          мессенджер для общения
+        </span>
+        <ul class="footer__messenger-list">
+          <li class="footer__messenger-item">
+            <label class="footer__messenger-label custom-checkbox" aria-label="whatsapp">
+              <input name="social" type="radio" class="custom-checkbox__field">
+              <span class="custom-checkbox__content custom-checkbox__content--whatsapp">
+
+              </span>
+            </label>
+          </li>
+          <li class="footer__messenger-item">
+            <label class="footer__messenger-label custom-checkbox" aria-label="telegram">
+              <input name="social" type="radio" class="custom-checkbox__field">
+              <span class="custom-checkbox__content custom-checkbox__content--telegram"></span>
+            </label>
+          </li>
+          <li class="footer__messenger-item">
+            <label class="footer__messenger-label custom-checkbox" aria-label="instagram">
+              <input name="social" type="radio" class="custom-checkbox__field">
+              <span class="custom-checkbox__content custom-checkbox__content--instagram"></span>
+            </label>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="footer__part">
+      <address class="footer__info">
+        <a class="footer__phone hover-string" href="tel:+996705188955">
+          Тел: <span>+996 705 188 955</span>
+        </a>
+        <a class="footer__phone hover-string" href="tel:+996705188955">
+          Тел: <span>+996 705 188 955</span>
+        </a>
+        <span class="footer__address">
+          Адрес: Бакаева 126
+        </span>
+      </address>
+    </div>
+  </div>
+</footer>
+<div class="small-nav">
+  <ul class="small-nav__list">
+    <li class="small-nav__menu-item">
+      <button class="small-nav__button small-nav__button--menu btn-reset" type="button">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#footer-menu"></use>
+        </svg>
+        Меню
+      </button>
+    </li>
+    <li class="small-nav__menu-item">
+      <button class="small-nav__button small-nav__button--basket btn-reset" type="button">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#footer-thrasher"></use>
+        </svg>
+        Корзина
+      </button>
+    </li>
+    <li class="small-nav__menu-item">
+      <button class="small-nav__button btn-reset" type="button">
+        <svg class="">
+          <use xlink:href="img/sprite.svg#footer-reviews"></use>
+        </svg>
+        Отзывы
+      </button>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <div class="right-aside">
+  <button class="right-aside__close" type="button"></button>
+  <div class="right-aside__basket basket">
+    <div class="basket__note">
+      <span class="basket__note-title">Ваша корзина пуста.</span>
+      <span class="basket__note-subtitle">Добавьте же скорее что-нибудь!</span>
+      <div class="basket__note-delivery">
+        Бесплатная доставка от 3000 СОМ
+      </div>
+    </div>
+    <div class="basket__order">
+      <div class="basket__list">
+      </div>
+      <div class="basket__result">
+        <ul class="basket__result-list">
+          <li class="basket__result-item">
+            <span class="basket__result-left"><span class="basket__result-amount">0</span> товар</span>
+            <span class="basket__result-right basket__result-right--price"><span class="basket__result-price">0</span>
+              СОМ</span>
+          </li>
+          <li class="basket__result-item">
+            <span class="basket__result-left">Скидка</span>
+            <span class="basket__result-right basket__result-right--discount">0</span>
+          </li>
+          <li class="basket__result-item">
+            <span class="basket__result-left">Доставка</span>
+            <span class="basket__result-right">
+              <span class="basket__result-delivery">150 COM</span>
+              <span class="basket__result-delivery-free">Бесплатно</span>
+            </span>
+          </li>
+          <li class="basket__result-item">
+            <span class="basket__result-left">Итого</span>
+            <span class="basket__result-right"><span class="basket__result-right-price">0</span> СОМ</span>
+          </li>
+        </ul>
+        <div class="basket__result-bottom">
+          <span class="basket__cost">
+            <span class="basket__cost-text">0</span> <span>СОМ</span>
+          </span>
+          <a class="basket__button button btn-reset" href="./order-page.html">
+            Оформить заказ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+    <div class="map__wrapper">
+      <picture>
+        <source srcset="../img/map.avif" type="image/avif">
+        <source srcset="../img/map.webp" type="image/webp">
+        <img loading="lazy" src="../img/map.jpg." class="image" alt="карта">
+      </picture>
+    </div>
+    <div class="map__note">
+      Укажите адрес
+      <span>И узнайте время доставки</span>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
