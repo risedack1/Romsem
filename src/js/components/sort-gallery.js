@@ -17,8 +17,6 @@ if (sortButton) {
     const listButton = target == sortButton;
     const activeList = sortList.classList.contains('gallery__sort-list--active');
 
-    console.log(target);
-
     if (!itsList && !listButton && activeList) {
       toggleList();
     }

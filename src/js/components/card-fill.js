@@ -12,7 +12,7 @@ window.addEventListener('click', (e) => {
     const cardPrice = card.querySelector('.card-item__price');
 
 
-    cardMiniObj = {
+    let cardMiniObj = {
       id: cardMini.getAttribute('data-id'),
       imgSource: cardMini.querySelector('.menu-card__image').getAttribute('src'),
       title: cardMini.querySelector('.menu-card__title').innerText,

@@ -68,20 +68,6 @@ function changeResult() {
     resultPrice.innerText = +resultPrice.textContent + basketItemSum;
   });
 
-  console.log(resultDiscount);
-
-  // if (+resultPrice.innerText > 3000) {
-  //   resultDeliveryPrice.style.display = 'none';
-  //   resultDeliveryFree.style.display = 'block';
-
-  //   resultTotalPrice.innerText = +resultPrice.innerText;
-  // } else {
-  //   resultDeliveryPrice.style.display = 'block';
-  //   resultDeliveryFree.style.display = 'none';
-
-  //   resultTotalPrice.innerText = +resultPrice.innerText + parseInt(resultDeliveryPrice.innerText);
-  // }
-
   if (+resultPrice.textContent > 3000 && +resultPrice.textContent < 8000) {
     resultDeliveryPrice.style.display = 'none';
     resultDeliveryFree.style.display = 'block';
